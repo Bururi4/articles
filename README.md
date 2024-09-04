@@ -3,7 +3,7 @@
 ### Frontend: 
 1. Run `npm i`.
 2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-3. 
+
 ### Backend:
 1. Run `npm i`.
 2. Run `npm install -g migrate-mongo`.
