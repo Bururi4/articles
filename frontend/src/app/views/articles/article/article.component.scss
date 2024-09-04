@@ -1,0 +1,180 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.article {
+  .container {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    .article-nav {
+      margin-bottom: 60px;
+      font-size: 16px;
+      color: #b9d5fd;
+
+      span {
+        text-decoration: none;
+        font-weight: 500;
+        color: $light-blue-text-color;
+      }
+    }
+
+    .article-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      .article-header-text {
+        max-width: 607px;
+
+        .article-header-title {
+          @include head-lora-38;
+          margin-bottom: 40px;
+        }
+
+        .article-header-description {
+          font-size: 20px;
+          line-height: 130%;
+          color: $light-blue-text-color;
+        }
+      }
+
+      .article-header-image {
+        width: 527px;
+        height: 320px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .article-body {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .article-body-content {
+        max-width: 818px;
+
+        .article-body-content-links {
+          padding-top: 40px;
+          font-weight: 500;
+          font-size: 14px;
+          color: $light-blue-text-color;
+          display: flex;
+          align-items: center;
+          margin-bottom: 120px;
+
+          a {
+            color: $light-blue-text-color;
+            text-decoration: none;
+            margin-left: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:first-child {
+              margin-left: 20px;
+            }
+          }
+        }
+
+        .comment {
+          .comment-title {
+            font-family: 'Lora', sans-serif;
+            font-weight: 400;
+            font-size: 38px;
+            color: $light-blue-text-color;
+          }
+
+          .comment-form {
+
+            .comment-form-input {
+              margin-top: 40px;
+              margin-bottom: 20px;
+
+              textarea.input {
+                width: 100%;
+                height: 248px;
+                resize: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                color: $dark-blue-text-color;
+              }
+            }
+
+            .comment-form-button {
+              button.button {
+                font-weight: 400;
+                width: 422px;
+              }
+            }
+
+            .comment-form-auth {
+              margin-top: 20px;
+              font-size: 14px;
+              color: $dark-blue-text-color;
+
+              a {
+                color: $light-blue-text-color;
+                text-decoration: none;
+              }
+            }
+          }
+
+          .comment-items {
+            margin-top: 60px;
+          }
+
+          .comment-more {
+            padding-top: 20px;
+            display: flex;
+
+            a {
+              font-weight: 500;
+              font-size: 20px;
+              color: $light-blue-text-color;
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              cursor: pointer;
+
+              &:hover {
+                color: $dark-blue-text-color;
+              }
+
+              &:hover svg path {
+                fill: $dark-blue-text-color;
+              }
+
+              svg {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .article-body-sidebar {
+        display: flex;
+        flex-direction: column;
+
+        .article-body-sidebar-title {
+          margin-top: 60px;
+          margin-bottom: 20px;
+          font-size: 26px;
+          color: $light-blue-text-color;
+        }
+
+        .article-body-sidebar-article {
+          margin-bottom: 60px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+  }
+}

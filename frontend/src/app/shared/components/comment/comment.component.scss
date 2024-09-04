@@ -1,0 +1,80 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.comment {
+  margin-bottom: 40px;
+
+  .comment-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .comment-user-image {
+      background-color: #B9D5FD;
+      border: 2px solid $light-blue-text-color;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    .comment-information {
+      .comment-username {
+        font-weight: 600;
+        font-size: 18px;
+        color: $light-blue-text-color;
+        margin-bottom: 10px;
+      }
+
+      .comment-date {
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        color: #bebebe;
+      }
+    }
+  }
+
+  .comment-text {
+    font-size: 14px;
+    line-height: 140%;
+    color: $dark-blue-text-color;
+    margin-bottom: 40px;
+  }
+
+  .comment-actions {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      color: $dark-blue-text-color;
+      cursor: pointer;
+
+      //&:last-child {
+      //  margin-right: 0;
+      //}
+
+      span {
+        margin-right: 3px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+
+    a.active {
+      color: $light-blue-text-color;
+
+      svg path {
+        stroke: $light-blue-text-color;
+      }
+    }
+  }
+}

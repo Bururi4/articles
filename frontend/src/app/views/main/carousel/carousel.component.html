@@ -1,0 +1,20 @@
+<section class="carousel">
+  <div class="container">
+    <p-carousel [value]="blocks" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="6500">
+      <ng-template let-block pTemplate="item">
+        <div class="carousel-slide" style="background-image: url('assets/images/carousel-images/{{block.img}}')">
+          <div class="slide-category">
+            {{ block.category }}
+          </div>
+          <div class="slide-title" [innerHTML]="block.title"></div>
+          <div class="slide-description">
+            {{ block.description }}
+          </div>
+          <div class="slide-button">
+            <button class="button button-medium" (click)="openModal('Продвижение')">Подробнее</button>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>

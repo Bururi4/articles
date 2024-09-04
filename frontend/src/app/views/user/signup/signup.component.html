@@ -1,0 +1,51 @@
+<section class="signup" [formGroup]="signupForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">
+        Регистрация на сайте
+      </div>
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input" placeholder="Ваше имя" formControlName="name">
+          <div *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.touched || signupForm.get('name')?.dirty)">
+            <div class="invalid-input" *ngIf="signupForm.get('name')?.errors?.['required']">
+              Поле обязательно для заполнения
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input" placeholder="Электронная почта" formControlName="email">
+          <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.touched || signupForm.get('email')?.dirty)">
+            <div class="invalid-input" *ngIf="signupForm.get('email')?.errors?.['required']">
+              Поле обязательно для заполнения
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input" placeholder="Пароль" formControlName="password">
+          <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.touched || signupForm.get('password')?.dirty)">
+            <div class="invalid-input" *ngIf="signupForm.get('password')?.errors?.['required']">
+              Поле обязательно для заполнения
+            </div>
+          </div>
+        </div>
+        <div class="auth-checkbox">
+          <input type="checkbox" id="agree" formControlName="agree">
+          <label for="agree">
+            Я принимаю <a href="#">условия пользовательского соглашения</a> и даю <a href="#">согласие на обработку
+            персональных данных</a>.
+          </label>
+        </div>
+      </div>
+      <div class="auth-button">
+        <button class="button button-big" [disabled]="signupForm.invalid" (click)="signup()">Зарегистрироваться</button>
+      </div>
+      <div class="auth-link">
+        Уже есть аккаунт? <a routerLink="/login">Войдите</a>
+      </div>
+    </div>
+    <div class="page-image">
+      <img src="assets/images/page/signup.png" alt="signup image">
+    </div>
+  </div>
+</section>

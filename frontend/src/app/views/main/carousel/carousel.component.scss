@@ -1,0 +1,115 @@
+@import "../../../../assets/styles/variables";
+
+.carousel {
+  .container {
+    padding-bottom: 120px;
+
+    ::ng-deep .p-carousel .p-carousel-content {
+      position: relative;
+
+      .p-carousel-container {
+        .p-carousel-prev, .p-carousel-next {
+          position: absolute;
+          z-index: 10;
+        }
+
+        .p-carousel-prev, .p-carousel-next {
+          background: transparent;
+          border: 0;
+          padding: 0 12px;
+          cursor: pointer;
+        }
+
+        .p-carousel-prev {
+          left: 0;
+
+          .pi-chevron-left {
+            content: url("../../../../assets/images/carousel-images/Previous.svg");
+          }
+        }
+
+        .p-carousel-next {
+          right: 0;
+
+          .pi-chevron-right {
+            content: url("../../../../assets/images/carousel-images/Next.svg");
+          }
+        }
+      }
+
+      .p-carousel-indicators {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        margin: 20px;
+        padding-left: 0;
+
+        .p-carousel-indicator {
+          margin-left: 10px;
+          margin-right: 10px;
+
+          &::marker {
+            content: '';
+          }
+
+          button {
+            padding: 0 !important;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid white;
+          }
+        }
+
+        .p-highlight button{
+          background: white;
+        }
+      }
+    }
+
+    .carousel-slide {
+      padding: 100px 80px;
+      height: 500px;
+      box-sizing: border-box;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .slide-category {
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: $light-blue-text-color;
+      }
+
+      .slide-title {
+        font-family: 'Lora', sans-serif;
+        font-size: 50px;
+        color: #ffffff;
+        width: 550px;
+        line-height: 65px;
+
+        ::ng-deep span {
+          color: $light-blue-text-color !important;
+        }
+      }
+
+      .slide-description {
+        font-size: 24px;
+        line-height: 130%;
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 456px;
+      }
+
+      .slide-button {
+        display: flex;
+        padding-top: 40px;
+      }
+    }
+  }
+}

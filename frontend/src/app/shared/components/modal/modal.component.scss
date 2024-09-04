@@ -1,0 +1,76 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+::ng-deep .p-dialog {
+  border: 2px solid $light-blue-text-color;
+  border-radius: 10px;
+  width: 731px !important;
+  height: 489px;
+
+  .p-dialog-header {
+    padding: 30px 30px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .p-dialog-content:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .modal {
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .modal-form-title {
+        @include head-lora-38;
+        margin-bottom: 18px;
+        width: 406px;
+        text-align: center;
+      }
+
+      .form-input {
+        margin-bottom: 5px;
+      }
+
+      .invalid-input {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      .service-input {
+        color: $light-blue-text-color;
+      }
+
+      .modal-form-button {
+        margin-top: 20px;
+      }
+    }
+
+    .modal-thanks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 70px;
+
+      .modal-thanks-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .modal-thanks-description {
+        margin-bottom: 40px;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        color: #1e1a2b;
+      }
+
+      .modal-thanks-button {
+        width: 73px !important;
+      }
+    }
+  }
+}

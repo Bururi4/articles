@@ -1,0 +1,26 @@
+<p-dialog [(visible)]="isVisible" [modal]="true" [style]="{ width: '45vw' }" [draggable]="false" [resizable]="false" (onHide)="closeModal()">
+  <div class="modal">
+    <form class="modal-form" *ngIf="consultationForm" [formGroup]="modalForm">
+      <div class="modal-form-title">{{ title }}</div>
+      <input type="text" class="input form-input service-input" *ngIf="type === 'order'" [attr.disabled]="true" formControlName="service">
+      <input type="text" class="input form-input" placeholder="Ваше имя" formControlName="name">
+      <div *ngIf="modalForm.get('name')?.invalid && (modalForm.get('name')?.touched || modalForm.get('name')?.dirty)">
+        <div class="invalid-input" *ngIf="modalForm.get('name')?.errors?.['required']">
+          Поле обязательно для заполнения
+        </div>
+      </div>
+      <input type="text" prefix="+7 " mask="(000) 000 00 00" class="input form-input" placeholder="Ваш номер телефона" formControlName="phone">
+      <div *ngIf="modalForm.get('phone')?.invalid && (modalForm.get('phone')?.touched || modalForm.get('phone')?.dirty)">
+        <div class="invalid-input" *ngIf="modalForm.get('phone')?.errors?.['required']">
+          Поле обязательно для заполнения
+        </div>
+      </div>
+      <button class="button button-big modal-form-button" [disabled]="modalForm.invalid" (click)="send()">{{ button }}</button>
+    </form>
+    <div class="modal-thanks" *ngIf="!consultationForm">
+      <div class="modal-thanks-title">Спасибо за вашу заявку!</div>
+      <div class="modal-thanks-description">Мы свяжемся с вами при первой же возможности.</div>
+      <button class="button button-small modal-thanks-button" (click)="closeModal()">Окей</button>
+    </div>
+  </div>
+</p-dialog>

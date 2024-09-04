@@ -1,0 +1,11 @@
+<div class="article">
+  <div class="article-category">{{ article.category }}</div>
+  <div class="article-image" style="background-image: url({{ '/assets/images/page/' + article.image }})"></div>
+  <div class="article-text">
+    <div class="article-title">{{ article.title | cutDescription: 80 }}</div>
+    <div class="article-description">{{ article.description | cutDescription: 200 }}</div>
+  </div>
+  <div class="article-action">
+    <a routerLink="/articles/{{ article.url }}">Читать дальше</a>
+  </div>
+</div>
